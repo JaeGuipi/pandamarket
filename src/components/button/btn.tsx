@@ -1,9 +1,14 @@
 interface BoxButtonprops {
   children: string;
   size: "large" | "medium" | "small40" | "small48";
+  className?: string;
 }
 
-export default function BoxButton({ children, size }: BoxButtonprops) {
+export default function BoxButton({
+  children,
+  size,
+  className,
+}: BoxButtonprops) {
   const sizeClass =
     size === "large"
       ? "py-4 px-[124px] rounded-[40px] text-xl h-[56px] "
@@ -14,7 +19,7 @@ export default function BoxButton({ children, size }: BoxButtonprops) {
       : "text-base h-[48px] rounded-lg px-[23px] py-[12px] leading-[26px]";
   return (
     <button
-      className={`text-white  bg-primary-100 font-semibold ${sizeClass} hover:bg-primary-200 active:bg-primary-300 disabled:bg-gray-400 text-center`}
+      className={`text-white  bg-primary-100 font-semibold ${sizeClass} hover:bg-primary-200 active:bg-primary-300 disabled:bg-gray-400 text-center ${className}`}
     >
       {children}
     </button>
