@@ -5,10 +5,15 @@ import main1 from "../../public/landing/main1.svg";
 import main2 from "../../public/landing/main2.svg";
 import main3 from "../../public/landing/main3.svg";
 import hero2 from "../../public/landing/section2.svg";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <div>
+      <header>
+        <Header />
+      </header>
       <main>
         <section className="h-[540px] bg-[#CFE5FF] flex items-end justify-center">
           <div className="flex items-center justify-center gap-2">
@@ -89,7 +94,9 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <footer></footer>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }
